@@ -8285,7 +8285,7 @@ end
 -- // Finalization
 task.spawn(function()
 pcall(function()
-if identifyexecutor():find("Synapse X") then
+if identifyexecutor():find("Synapse") then
     while true do
         game:GetService("RunService").Heartbeat:Wait()
         for _, Descendant in pairs(game:GetDescendants()) do
