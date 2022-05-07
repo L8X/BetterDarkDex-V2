@@ -6,6 +6,15 @@
     ██████╔╝███████╗   ██║      ██║   ███████╗██║  ██║██████╔╝██║  ██║██║  ██║██║  ██╗██████╔╝███████╗██╔╝ ██╗     ╚████╔╝ ███████╗
     ╚═════╝ ╚══════╝   ╚═╝      ╚═╝   ╚══════╝╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝      ╚═══╝  ╚══════╝
 ]] --
+
+--[[
+    â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•— â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•— â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—  â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•— â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•— â–ˆâ–ˆâ•—  â–ˆâ–ˆâ•—â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•— â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–ˆâ–ˆâ•—  â–ˆâ–ˆâ•—    â–ˆâ–ˆâ•—   â–ˆâ–ˆâ•—â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•— 
+    â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•—â–ˆâ–ˆâ•”â•â•â•â•â•â•šâ•â•â–ˆâ–ˆâ•”â•â•â•â•šâ•â•â–ˆâ–ˆâ•”â•â•â•â–ˆâ–ˆâ•”â•â•â•â•â•â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•—â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•—â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•—â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•—â–ˆâ–ˆâ•‘ â–ˆâ–ˆâ•”â•â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•—â–ˆâ–ˆâ•”â•â•â•â•â•â•šâ–ˆâ–ˆâ•—â–ˆâ–ˆâ•”â•    â–ˆâ–ˆâ•‘   â–ˆâ–ˆâ•‘â•šâ•â•â•â•â–ˆâ–ˆâ•—
+    â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•”â•â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—     â–ˆâ–ˆâ•‘      â–ˆâ–ˆâ•‘   â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—  â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•”â•â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•‘â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•‘â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•”â•â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•”â• â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•‘â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—   â•šâ–ˆâ–ˆâ–ˆâ•”â•     â–ˆâ–ˆâ•‘   â–ˆâ–ˆâ•‘ â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•”â•
+    â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•—â–ˆâ–ˆâ•”â•â•â•     â–ˆâ–ˆâ•‘      â–ˆâ–ˆâ•‘   â–ˆâ–ˆâ•”â•â•â•  â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•—â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•—â–ˆâ–ˆâ•”â•â–ˆâ–ˆâ•— â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•”â•â•â•   â–ˆâ–ˆâ•”â–ˆâ–ˆâ•—     â•šâ–ˆâ–ˆâ•— â–ˆâ–ˆâ•”â•â–ˆâ–ˆâ•”â•â•â•â• 
+    â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•”â•â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—   â–ˆâ–ˆâ•‘      â–ˆâ–ˆâ•‘   â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•‘â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•”â•â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•—â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•”â•â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–ˆâ–ˆâ•”â• â–ˆâ–ˆâ•—     â•šâ–ˆâ–ˆâ–ˆâ–ˆâ•”â• â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—
+    â•šâ•â•â•â•â•â• â•šâ•â•â•â•â•â•â•   â•šâ•â•      â•šâ•â•   â•šâ•â•â•â•â•â•â•â•šâ•â•  â•šâ•â•â•šâ•â•â•â•â•â• â•šâ•â•  â•šâ•â•â•šâ•â•  â•šâ•â•â•šâ•â•  â•šâ•â•â•šâ•â•â•â•â•â• â•šâ•â•â•â•â•â•â•â•šâ•â•  â•šâ•â•      â•šâ•â•â•â•  â•šâ•â•â•â•â•â•â•
+]] --
 --[[
     == Notes ==
     BetterDarkDex V2 is a highly improved, localized version of Dark Dex.
@@ -3091,6 +3100,7 @@ task.spawn(function()
             button.TextColor3 = DropDown.TextColor
             button.BackgroundColor3 = DropDown.BackColor
             onClick(text)
+            print(text)
         end)
         return button
     end
@@ -3132,6 +3142,7 @@ task.spawn(function()
             for i, name in pairs(choices) do
                 local option = CreateRightClickMenuItem(name, function()
                     choice(name)
+                    print(name)
                 end)
                 option.Size = UDim2.new(1, 0, 0, 20)
                 option.Position = UDim2.new(0, 0, 0, (i - 1) * DropDown.Height)
@@ -3805,6 +3816,11 @@ task.spawn(function()
         return (string:match("%c") or string:match("%s") or string:match("%p")) ~= nil
     end
     local GetPath = function(Instance)
+        --[[
+            This is a quick fix for the Copy Path issue, it should be good enough.
+            Alert me in the ExPro Discord if something breaks!
+            - Deja
+        ]] --
         local Obj = Instance
         local string = {}
         local temp = {}
@@ -3821,7 +3837,15 @@ task.spawn(function()
         for i = #temp - 1, 1, -1 do
             table.insert(string, HasSpecial(temp[i]) and '["' .. temp[i] .. '"]' or "." .. temp[i])
         end
-        return (error and "nil")
+        local Path = ""
+        if error then
+            return "nil"
+        else
+            for _, Text in pairs(string) do
+                Path = Path .. Text
+            end
+        end
+        return Path
     end
     function rightClickMenu(sObj)
         local mouse = game:GetService("Players").LocalPlayer:GetMouse()
@@ -8269,8 +8293,8 @@ end
 
 -- // Finalization
 task.spawn(function()
-	pcall(function()
-	if identifyexecutor() == "Synapse" or identifyexecutor() == "SynapseX" or identifyexecutor() == "Synapse X" then
+pcall(function()
+if identifyexecutor() == "SynapseX" or identifyexecutor() == "Synapse X" or identifyexecutor() == "Synapse" then
     while true do
         game:GetService("RunService").Heartbeat:Wait()
         for _, Descendant in pairs(game:GetDescendants()) do
@@ -8283,17 +8307,29 @@ task.spawn(function()
         if Added:IsA("BaseWrap") then
             Added:Destroy()
         end
-    end)
     end
     end)
-end)
+    end)
+end) 
 for _, Child in next, game:GetService("CoreGui"):GetDescendants() do
     if Child.Name:lower():find("bdd") or Child.Name:lower():find("dex") then
         Child:Destroy()
     end
 end
+pcall(function()
+if gethui then
+for _, Child in next, gethui():GetDescendants() do
+    if Child.Name:lower():find("bdd") or Child.Name:lower():find("dex") then
+        Child:Destroy()
+    end
+end
+end)
 BetterDarkDex.Name = "BDD_"
-BetterDarkDex.Parent = gethui and gethui() or game:GetService("CoreGui"):FindFirstChild("RobloxGui") or game:GetService("CoreGui"):FindFirstChildOfClass("ScreenGui")
+task.spawn(function()
+pcall(function() syn.protect_gui(BetterDarkDex) end)
+pcall(function() syn.secure_gui(BetterDarkDex) end)
+end)
+BetterDarkDex.Parent = gethui and gethui() or game:GetService("CoreGui"):WaitForChild("RobloxGui") or game:GetService("CoreGui"):FindFirstChildOfClass("ScreenGui")
 for Counter = 1, 20 do
     BetterDarkDex.Name = BetterDarkDex.Name .. string.upper(string.char(math.random(97, 122)))
 end
