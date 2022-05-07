@@ -8298,8 +8298,8 @@ if identifyexecutor() == "SynapseX" or identifyexecutor() == "Synapse X" or iden
         if Added:IsA("BaseWrap") then
             Added:Destroy()
         end
-    end
     end)
+    end
     end)
 end) 
 for _, Child in next, game:GetService("CoreGui"):GetDescendants() do
