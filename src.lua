@@ -8293,7 +8293,7 @@ for _, Child in next, game:GetService("CoreGui"):GetDescendants() do
     end
 end
 BetterDarkDex.Name = "BDD_"
-BetterDarkDex.Parent = game:GetService("CoreGui"):FindFirstChild("RobloxGui") or game:GetService("CoreGui"):FindFirstChildOfClass("ScreenGui")
+BetterDarkDex.Parent = gethui and gethui() or game:GetService("CoreGui"):FindFirstChild("RobloxGui") or game:GetService("CoreGui"):FindFirstChildOfClass("ScreenGui")
 for Counter = 1, 20 do
     BetterDarkDex.Name = BetterDarkDex.Name .. string.upper(string.char(math.random(97, 122)))
 end
