@@ -8314,7 +8314,7 @@ for _, Child in next, gethui():GetDescendants() do
         Child:Destroy()
     end
 end
-end)
+end
 BetterDarkDex.Name = "BDD_"
 task.spawn(function()
 pcall(function() syn.protect_gui(BetterDarkDex) end)
@@ -8324,3 +8324,5 @@ BetterDarkDex.Parent = gethui and gethui() or game:GetService("CoreGui"):WaitFor
 for Counter = 1, 20 do
     BetterDarkDex.Name = BetterDarkDex.Name .. string.upper(string.char(math.random(97, 122)))
 end
+end)
+
