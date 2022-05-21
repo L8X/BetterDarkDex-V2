@@ -8286,12 +8286,9 @@ end
 task.spawn(function()
 pcall(function()
 if identifyexecutor():find("Synapse") then
-    while true do
-        game:GetService("RunService").Heartbeat:Wait()
-        for _, Descendant in pairs(game:GetDescendants()) do
-            if Descendant:IsA("BaseWrap") then
-                Descendant:Destroy()
-            end
+    for _, Descendant in pairs(game:GetDescendants()) do
+        if Descendant:IsA("BaseWrap") then
+            Descendant:Destroy()
         end
     end
     game.DescendantAdded:Connect(function(Added)
@@ -8301,7 +8298,7 @@ if identifyexecutor():find("Synapse") then
     end)
     end
     end)
-end) 
+end)
 for _, Child in next, game:GetService("CoreGui"):GetDescendants() do
     if Child.Name:lower():find("bdd") or Child.Name:lower():find("dex") then
         Child:Destroy()
@@ -8325,4 +8322,3 @@ BetterDarkDex.Parent = gethui and gethui() or game:GetService("CoreGui"):WaitFor
 for Counter = 1, 20 do
     BetterDarkDex.Name = BetterDarkDex.Name .. string.upper(string.char(math.random(97, 122)))
 end
-
