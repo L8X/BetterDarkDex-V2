@@ -28,6 +28,13 @@
     The Dark Dex source used is from 6th May 2022, latest as of writing.
 ]] --
 
+if identifyexecutor() == "ScriptWare" then
+    local function decomp(a)
+        return tostring(disassemble(getscriptbytecode(a)))
+    end
+    getgenv().decompile = decomp
+end
+
 -- // Interface
 local BetterDarkDex = Instance.new("ScreenGui")
 local PropertiesFrame = Instance.new("Frame")
