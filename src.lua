@@ -4200,8 +4200,8 @@ task.spawn(function()
                 elseif (clickPos - dragPos).magnitude > 8 then
                     dragged = true
                     SetZIndex(dragGhost, 9)
-                    dragGhost.IndentFrame.Transparency = 0.25
-                    dragGhost.IndentFrame.EntryText.TextColor3 = GuiColor.TextSelected
+                    dragGhost:WaitForChild("IndentFrame").Transparency = 0.25
+                    dragGhost:WaitForChild("IndentFrame").EntryText.TextColor3 = GuiColor.TextSelected
                     dragGhost.Position = UDim2.new(0, dragPos.x + ghostOffset.x, 0, dragPos.y + ghostOffset.y)
                     dragGhost.Parent = GetScreen(listFrame)
                     parentHighlight.Parent = listFrame
@@ -4303,7 +4303,7 @@ task.spawn(function()
                             ZIndex = listFrame.ZIndex
                         })
                         listEntries[i] = entry
-                        local expand = entry.IndentFrame.Expand
+                        local expand = entry:WaitForChild("IndentFrame").Expand
                         expand.MouseEnter:connect(function()
                             local node = TreeList[i + self.ScrollIndex]
                             if #node > 0 then
@@ -4414,29 +4414,29 @@ task.spawn(function()
                     entry.Visible = true
                     local object = node.Object
                     if #node == 0 then
-                        entry.IndentFrame.Expand.Visible = false
+                        entry:WaitForChild("IndentFrame").Expand.Visible = false
                     elseif node.Expanded then
-                        Icon(entry.IndentFrame.Expand, NODE_EXPANDED)
-                        entry.IndentFrame.Expand.Visible = true
+                        Icon(entry:WaitForChild("IndentFrame").Expand, NODE_EXPANDED)
+                        entry:WaitForChild("IndentFrame").Expand.Visible = true
                     else
-                        Icon(entry.IndentFrame.Expand, NODE_COLLAPSED)
-                        entry.IndentFrame.Expand.Visible = true
+                        Icon(entry:WaitForChild("IndentFrame").Expand, NODE_COLLAPSED)
+                        entry:WaitForChild("IndentFrame").Expand.Visible = true
                     end
-                    Icon(entry.IndentFrame.ExplorerIcon, ExplorerIndex[object.ClassName] or 0)
+                    Icon(entry:WaitForChild("IndentFrame").ExplorerIcon, ExplorerIndex[object.ClassName] or 0)
                     local w = (node.Depth) * (2 + ENTRY_PADDING + GUI_SIZE)
-                    entry.IndentFrame.Position = UDim2.new(0, w, 0, 0)
-                    entry.IndentFrame.Size = UDim2.new(1, -w, 1, 0)
+                    entry:WaitForChild("IndentFrame").Position = UDim2.new(0, w, 0, 0)
+                    entry:WaitForChild("IndentFrame").Size = UDim2.new(1, -w, 1, 0)
                     if nameConnLookup[entry] then
                         nameConnLookup[entry]:disconnect()
                     end
-                    local text = entry.IndentFrame.EntryText
+                    local text = entry:WaitForChild("IndentFrame").EntryText
                     text.Text = object.Name
                     nameConnLookup[entry] = node.Object.Changed:connect(function(p)
                         if p == "Name" then
                             text.Text = object.Name
                         end
                     end)
-                    entry.IndentFrame.Transparency = node.Selected and 0 or 1
+                    entry:WaitForChild("IndentFrame").Transparency = node.Selected and 0 or 1
                     text.TextColor3 = GuiColor[node.Selected and "TextSelected" or "Text"]
                     entry.Size = UDim2.new(0, nodeWidth, 0, ENTRY_SIZE)
                 elseif listEntries[i] then
@@ -8324,8 +8324,9 @@ BetterDarkDex.Name = "BDD_"
 task.spawn(function()
 pcall(function() syn.protect_gui(BetterDarkDex) end)
 pcall(function() syn.secure_gui(BetterDarkDex) end)
+pcall(function() protect_gui(BetterDarkDex) end)
 end)
-BetterDarkDex.Parent = gethui and gethui() or game:GetService("CoreGui"):WaitForChild("RobloxGui") or game:GetService("CoreGui"):FindFirstChildOfClass("ScreenGui")
+BetterDarkDex.Parent = gethui and gethui() or game:GetService("CoreGui"):FindFirstChild("RobloxGui") or game:GetService("CoreGui"):FindFirstChildOfClass("ScreenGui")
 for Counter = 1, 20 do
     BetterDarkDex.Name = BetterDarkDex.Name .. string.upper(string.char(math.random(97, 122)))
 end
